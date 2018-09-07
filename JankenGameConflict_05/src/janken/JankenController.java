@@ -11,9 +11,11 @@ public class JankenController {
          "グー", "チョキ", "パー"
      };
 
+     private int score = 0;
      private int win = 0;
      private int draw = 0;
      private int lose = 0;
+
 
       private Label cpuHandLabel;
       private Label myHandLabel;
@@ -73,6 +75,7 @@ public class JankenController {
          cpuHandLabel.setText("コンピュータの手: " + hands[cpuHand]);
          myHandLabel.setText("あなたの手: " + hands[myHand]);
          resultLabel.setText("結果: " + getResult(myHand, cpuHand));
-         scoreLabel.setText(" Win:"+win+" Draw:"+draw+" Lose:"+lose);
+         scoreLabel.setText("Score:"+score+" Win:"+win+" Draw:"+draw+" Lose:"+lose);
+
      }
 }
